@@ -1,0 +1,123 @@
+.slideshow {
+  list-style-type: none;
+}
+
+/** SLIDESHOW **/
+.slideshow{ 
+  top: -16px; /*Not sure why I needed this fix*/
+  background-attachment: fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  z-index: 0; 
+
+}
+
+.slideshow li span { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 30s linear infinite 0s; 
+}
+
+
+
+.slideshow li:nth-child(1) span { 
+  background: rgb(51, 255, 0);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(124, 73%, 18%, 0.76), hsla(123, 68%, 21%, 0.664), #0a5c0fc9),url(../imagenes/banner1.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #145e189a, #0caf1588, #00ff0d7a),url(../imagenes/banner1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  animation-delay: 0s; 
+}
+.slideshow li:nth-child(2) span { 
+  background: rgb(51, 255, 0);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(124, 73%, 18%, 0.76), hsla(123, 68%, 21%, 0.664), #0a5c0fc9),url(../imagenes/banner2.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #145e189a, #0caf1588, #00ff0d7a),url(../imagenes/banner2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  animation-delay: 6s; 
+}
+.slideshow li:nth-child(3) span { 
+  background: rgb(51, 255, 0);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(124, 73%, 18%, 0.76), hsla(123, 68%, 21%, 0.664), #0a5c0fc9),url(../imagenes/banner3.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #145e189a, #0caf1588, #00ff0d7a),url(../imagenes/banner3.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  animation-delay: 12s; 
+}
+.slideshow li:nth-child(4) span { 
+  background: rgb(51, 255, 0);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(124, 73%, 18%, 0.76), hsla(123, 68%, 21%, 0.664), #0a5c0fc9),url(../imagenes/banner4.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #145e189a, #0caf1588, #00ff0d7a),url(../imagenes/banner4.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;  
+  animation-delay: 18s; 
+}
+.slideshow li:nth-child(5) span { 
+  background: rgb(51, 255, 0);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(124, 73%, 18%, 0.76), hsla(123, 68%, 21%, 0.664), #0a5c0fc9),url(../imagenes/banner2.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #145e189a, #0caf1588, #00ff0d7a),url(../imagenes/banner2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  animation-delay: 24s; 
+}
+
+@media screen and (max-width:425px){
+  .slideshow li:nth-child(1) span, 
+  .slideshow li:nth-child(2) span,
+  .slideshow li:nth-child(3) span,
+  .slideshow li:nth-child(4) span,
+  .slideshow li:nth-child(5) span {
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in; 
+
+  }
+  8% { opacity: 1; 
+    animation-timing-function: ease-out; 
+  }
+  17% { 
+    opacity: 1 ;
+  }
+  25% { 
+    opacity: 0 ;
+
+  }
+  100% { 
+    opacity: 0 ;
+    scale: 2;
+    transform: scale(3);
+  }
+  
+}
+
+
+@keyframes titleAnimation { 
+  0% { opacity: 0 }
+  8% { opacity: 1 }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+
+.no-cssanimations .cb-slideshow li span {
+  opacity: 1;
+}
